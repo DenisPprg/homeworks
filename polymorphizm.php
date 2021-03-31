@@ -79,7 +79,7 @@ class Student extends User{
 
 class Driver extends Worker{
     private $experience;
-    private $category = array(A,B,C);
+    private $category = array('A','B','C');
     public function setExpAndCat(string $experience,$category){
         $this->experience = $experience;
         $this->category = $category;
