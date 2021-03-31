@@ -79,7 +79,7 @@ class Student extends User{
 
 class Driver extends Worker{
     private $experience;
-    private $category;
+    private $category = array(A,B,C);
     public function setExpAndCat(string $experience,$category){
         $this->experience = $experience;
         $this->category = $category;
@@ -87,15 +87,13 @@ class Driver extends Worker{
     public function getExp(): string{
         return $this->experience;
     }
-    public function getCat(): string{
+    public function getCat(): array{
         return $this->category;
     }
 }
 
 echo "<br />";
 $driver = new Driver();
-$driver->setExpAndCat(5,'A'); //Для проверки
 var_dump($driver);
-
-
+var_dump($driver->getCat());
 
