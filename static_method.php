@@ -21,37 +21,28 @@ class User{
     {
         return $this->age;
     }
-    public function __destruct()
-    {
-        echo 'Проверка дестркутора' . "\n";
-    }
 }
 
-class Builder extends User {
+class Builder {
     private static $counter=0;
-    public function __construct($name, $age){
+    public function create($name,$age){
+        $user = new User();
+        $user->age = $age;
+        $user->name = $name;
         self::$counter++;
-        echo 'Проверка конструктора, имя - '. $name .', возраст - '. $age. "\n";
-        $this->name = $name;
-        $this->age = $age;
     }
     static function getCount(){
         return self::$counter;
     }
-    public function __toString()
-    {
-        return $this->name . ', ' . $this->age;
-    }
-    public function __destruct()
-    {
-        parent::__destruct();
-    }
 }
 
-$tom = new Builder('Tom', 23);
-$bob = new Builder('Bob', 50);
+echo "\n";
+$a = new Builder();
+$user1 = $a->create('Den', 25);
+$user2 = $a->create('Joe', 30);
+$user3 = $a->create('Alex', 35);
 
 
-echo  'Проверка __toString, имя и возраст - '. $bob. "\n";
+
 echo 'Всего пользователей: ' .  Builder::getCount(). "\n";
 
