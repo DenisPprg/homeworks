@@ -30,6 +30,7 @@ class Builder {
         $user->age = $age;
         $user->name = $name;
         self::$counter++;
+        return $user;
     }
     static function getCount(){
         return self::$counter;
