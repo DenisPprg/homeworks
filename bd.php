@@ -19,9 +19,5 @@ $stm->execute();
 $list = $stm->fetchAll(PDO::FETCH_ASSOC);
 
 
-/*foreach ($list as $item){
-    echo 'Name: '. $item['Name']. ', age:'. $item['Age']. ', Gender:'. $item['Gender']. "<br />\n";
-}*/
-
 include 'table.html.php';
 
