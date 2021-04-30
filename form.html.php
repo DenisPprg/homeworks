@@ -8,12 +8,21 @@
     <p>Введите имя:<br>
         <input type="text" name="firstname" required="required" placeholder="Укажите ваше имя" /></p>
     <p>Введите пол: <br>
-        Мужской: <input type="radio" name="sex" value="Мужской" />
+        Мужской: <input type="radio" name="sex" value="Male" />
         <br />
-        Женский: <input type="radio" required="required" name="sex" value="Женский" />
+        Женский: <input type="radio" required="required" name="sex" value="Female" />
     </p>
     <p>Введите возраст:<br>
         <input type="number" required="required" name="age" min="1" max="100"/></p>
+    <p>Номер паспорта:<br>
+        <input type="number" name="numbers" /></p>
+    </p>
+    <p>Серия паспорта:<br>
+        <input type="number" name="serial" /></p>
+    </p>
+    <p>Дата выдачи:<br>
+        <input type="date" name="date" /></p>
+    </p>
     <input class="pressed-button" type="submit" value="Отправить" style="position: absolute; left: 23px; top: 200px"/>
 </form>
 
@@ -40,7 +49,7 @@ div{
         text-decoration: none;
         display: inline-block;
         padding: 5px 12px;
-        margin: 7px 15px;
+        margin: 177px 1px;
         border-radius: 30px;
         background-image: linear-gradient(45deg, #6ab1d7 0%, #33d9de 50%, #002878 100%);
         background-position: 100% 0;

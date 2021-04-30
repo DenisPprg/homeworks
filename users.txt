@@ -1,7 +1,4 @@
-Name;Sex;Age;
-Denis;Мужской;22;
-Alex;Мужской;29;
-Anna;Женский;54;
-Alex;Мужской;31;
-qwe133;Женский;99;
-qwe13344;Женский;1;
+Name;Sex;Age;Number;Serial;Date;
+vova;Female;27;6;54;2021-04-01;
+ЗЩЗ;Female;33;5;6;2021-04-09;
+Ольга;Female;20;4656;75596;2021-02-11;
