@@ -1,0 +1,46 @@
+<html style="height: 100%;">
+<head>
+    <meta charset="utf-8">
+    <title>KVADRAT</title>
+</head>
+<body onmousemove="mouseMoveFunction()" style="height: 100%;">
+<div id="test"></div>
+
+<style type="text/css">
+    #test {
+        width: 150px;
+        height: 150px;
+        background-color: var(--bg);
+        transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px));
+    }
+    html, body{
+        margin: 0;
+    }
+
+</style>
+
+<script>
+
+    let isPresed = false;
+    let colors = ['#000', '#f00', '#0f0', '#00f'];
+    let root = document.documentElement;
+    root.style.setProperty('--bg', colors[0]);
+
+    root.addEventListener('mousedown', () => isPresed = true);
+    root.addEventListener('mouseup', () => isPresed = false);
+
+    root.addEventListener('mousemove', (e) => {
+        if (isPresed) {
+            const isBottom = window.innerHeight / 2 < e.clientY;
+            const isRight = window.innerWidth / 2 < e.clientX;
+            const index = !isRight && isBottom ? 3 : isBottom + isRight;
+            root.style.setProperty('--x', e.clientX);
+            root.style.setProperty('--y', e.clientY);
+            root.style.setProperty('--bg', colors[index]);
+        }
+    });
+
+
+</script>
+</body>
+</html>
