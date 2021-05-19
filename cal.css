@@ -1,0 +1,38 @@
+@charset "UTF-8";
+*{
+    font-family:  Microsoft Yahei Light;
+    margin:0;
+    padding:0;
+}
+body { display: flex; height: 100vh;
+    background: url("1233.gif");
+}
+
+#cal {
+    width:300px;
+    height:350px;
+    margin: auto;
+    padding: 20px;
+    background: cornsilk;
+    box-shadow: 0 0 10px red;
+    border-radius: 10px;
+}
+span{
+    display:block;
+    float:left;
+    border:2px solid darkred;
+    border-radius: 2px;
+    width:200px;
+    height:46px;
+    line-height:46px;
+    margin:10px 10px;
+overflow: auto;
+}
+input{
+    width:50px;
+    height:50px;
+    margin:10px 10px;
+    border:1px solid black;
+    border-radius: 2px;
+    background-color: deepskyblue;
+}
