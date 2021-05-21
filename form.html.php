@@ -4,7 +4,7 @@
 <div class="profile"><img src="https://html5book.ru/wp-content/uploads/2016/10/profile-image.png">
     <h2>Анкета</h2>
 </div>
-<form action="form.php" method="POST" style="position: absolute; left: 830px; top: 190px ">
+<form action="formZ.php" method="POST" style="position: absolute; left: 830px; top: 190px ">
     <p>Введите имя:<br>
         <input type="text" name="firstname" required="required" placeholder="Укажите ваше имя" /></p>
     <p>Введите пол: <br>
