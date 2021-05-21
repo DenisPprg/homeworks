@@ -2,16 +2,21 @@
 <head>
     <meta charset="utf-8">
     <title>KVADRAT</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery.ui.touch-punch.min.js"></script>
+
 </head>
 <body onmousemove="mouseMoveFunction()" style="height: 100%;">
 <div id="test"></div>
-
 <style type="text/css">
     #test {
         width: 150px;
         height: 150px;
         background-color: var(--bg);
         transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px));
+        position: absolute;
     }
     html, body{
         margin: 0;
@@ -20,6 +25,13 @@
 </style>
 
 <script>
+
+    $(function () {
+        $("div[id='test']").draggable({
+            containment: window,
+            scroll: false
+        });
+    });
 
     let isPresed = false;
     let colors = ['#000', '#f00', '#0f0', '#00f'];
@@ -40,7 +52,16 @@
         }
     });
 
+    var w = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
 
+    var h = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
+    var q = document.getElementById("test");
+    q.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
 </script>
 </body>
 </html>

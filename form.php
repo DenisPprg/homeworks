@@ -37,7 +37,7 @@ $userid = $connection->lastInsertId();
 
     $sql = "INSERT INTO `passport` (`user_id`,`number`, `serial`, `date`)
 VALUES ('".$userid."','". $pnumbers."','". $pserial."','". $pdate."')";
-$query2 = $connection->query($sql);
+$query = $connection->query($sql);
 
 
 }else{
